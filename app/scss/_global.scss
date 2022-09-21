@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: RFDewi, Arial, sans-serif;
+  font-weight: 400;
+}
+.container{
+  max-width: 1760px;
+  width: 100%;
+  margin: 0 auto;
+}
+.cases__tab.tab--active{
+  display: block;
+}
+.cases-button.tabs-navigation__item--active{
+  color: #C2C6CB;
+  text-decoration: none;
+}
