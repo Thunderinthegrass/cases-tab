@@ -21,7 +21,7 @@
       transform: scale(1.35, 1) translateX(-12px);
     }
   }
-  &__tab{
+  &__tab {
     display: none;
   }
   &__tab-filters {
@@ -39,7 +39,7 @@
     font-size: 16px;
     line-height: 19px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
     &:first-child {
       width: 313px;
       span {
@@ -65,18 +65,19 @@
       width: 100%;
       border-right: 1px solid #4d4e4f;
       position: relative;
-      .slider-button{
+      .slider-button {
         position: absolute;
-        top: calc(50% - 18px);
+        top: 50%;
         transform: translateY(-50%);
         z-index: 10;
+        display: none;
       }
-      .btn-prev{
+      .btn-prev {
         left: 33%;
       }
-      .btn-next{
+      .btn-next {
         right: 33%;
-        svg{
+        svg {
           transform: rotate(180deg);
         }
       }
@@ -90,7 +91,7 @@
         font-size: 18px;
         line-height: 22px;
         cursor: pointer;
-        transition: .3s;
+        transition: 0.3s;
       }
       .name-tab__img {
         width: 77px;
@@ -117,7 +118,7 @@
         border-right: 1px solid #4d4e4f;
         max-width: 559px;
         width: 100%;
-        &-indicators{
+        &-indicators {
           max-width: 300px;
           width: 100%;
         }
@@ -132,35 +133,35 @@
         }
         .indicator {
           margin-bottom: 38px;
-          &:nth-child(1){
-            .indicator-name{
+          &:nth-child(1) {
+            .indicator-name {
               transform: scale(1.32, 1) translateX(15px);
             }
-            .indicator-value{
+            .indicator-value {
               transform: scale(1.32, 1) translateX(37px);
             }
           }
-          &:nth-child(2){
-            .indicator-name{
+          &:nth-child(2) {
+            .indicator-name {
               transform: scale(1.32, 1) translateX(15px);
             }
-            .indicator-value{
+            .indicator-value {
               transform: scale(1.32, 1) translateX(37px);
             }
           }
-          &:nth-child(3){
-            .indicator-name{
+          &:nth-child(3) {
+            .indicator-name {
               transform: scale(1.32, 1) translateX(16px);
             }
-            .indicator-value{
+            .indicator-value {
               transform: scale(1.32, 1) translateX(37px);
             }
           }
-          &:nth-child(4){
-            .indicator-name{
+          &:nth-child(4) {
+            .indicator-name {
               transform: scale(1.32, 1) translateX(23px);
             }
-            .indicator-value{
+            .indicator-value {
               transform: scale(1.32, 1) translateX(37px);
             }
           }
@@ -211,7 +212,7 @@
           line-height: 151.5%;
           margin-bottom: 20px;
         }
-        .works__list{
+        .works__list {
           margin-bottom: 43px;
         }
         .works__item {
@@ -241,55 +242,159 @@
     }
   }
 }
-.cases.media{
-  @media(max-width: 1919px){
-    .body-info__left{
+.cases.media {
+  @media (max-width: 1919px) {
+    .body-info__left {
       max-width: 462px;
     }
   }
-  @media(max-width: 1819px){
-    .tab-body__names{
+  @media (max-width: 1819px) {
+    .tab-body__names {
       max-width: 300px;
     }
-    .tab-body__info{
+    .tab-body__info {
       justify-content: center;
     }
   }
-  @media(max-width: 1690px){
-    .body-info__right{
+  @media (max-width: 1690px) {
+    .body-info__right {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding-left: 0;
-      .works{
+      .works {
         transform: scale(1.33, 1) translateX(0px);
       }
     }
-    .body-info__right-img{
+    .body-info__right-img {
       max-width: 600px;
       height: auto;
-      img{
+      img {
         object-fit: contain;
         border-radius: 5px;
       }
     }
   }
-  @media(max-width: 1533px){
-    .tab-body{
+  @media (max-width: 1533px) {
+    .slider-button{
+      display: block;
+    }
+    .tab-body {
       flex-direction: column;
     }
-    .name-tab{
-      display: none;
-      &.tab--active{
+    .name-tab {
+      opacity: 1;
+      &.tab--active {
         display: flex;
       }
     }
-    .tab-body__names{
+    .tab-body__names {
       border-right: none;
+      height: 160px;
       max-width: 100%;
       display: flex;
-      flex-direction: row;
+      // flex-direction: row;
       justify-content: center;
+      .name-tab {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        margin-bottom: 0;
+      }
     }
+  }
+  @media (max-width: 1242px) {
+    .body-info__left {
+      padding-left: 0;
+    }
+    .body-info__right-img {
+      max-width: 500px;
+    }
+    .body-info__left {
+      max-width: 400px;
+    }
+    .btn-next {
+      right: 30%;
+    }
+  }
+  @media (max-width: 1188px) {
+    .body-info {
+      flex-direction: column;
+    }
+    .body-info__right {
+      margin: 0 auto;
+    }
+    .body-info__left {
+      border-right: none;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 1090px) {
+    .btn-next {
+      right: 25%;
+    }
+    .btn-prev {
+      right: auto;
+      left: 30%;
+    }
+  }
+  @media (max-width: 934px) {
+    .btn-next {
+      right: 20%;
+    }
+    .btn-prev {
+      right: auto;
+      left: 25%;
+    }
+  }
+  @media (max-width: 850px) {
+    .btn-next {
+      right: 15%;
+    }
+    .btn-prev {
+      right: auto;
+      left: 20%;
+    }
+    .body-info__right {
+      width: auto;
+    }
+  }
+  @media (max-width: 678px) {
+    .btn-next {
+      right: 10%;
+    }
+    .btn-prev {
+      right: auto;
+      left: 15%;
+    }
+  }
+  @media (max-width: 668px) {
+    .container{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .tab-filter {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 6px 16px;
+      &:first-child{
+        width: 225px;
+      }
+      &:nth-child(2){
+        width: 88px;
+      }
+    }
+    .tab-filters{
+      margin-bottom: 34px;
+    }
+    .tab-body__names{
+      height: 80px;
+      margin-bottom: 34px;
+    }
+  }
+  @media (max-width: 668px){
+
   }
 }
