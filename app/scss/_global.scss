@@ -7,9 +7,10 @@ body {
   font-weight: 400;
 }
 .container{
-  max-width: 1760px;
   width: 100%;
   margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 .cases__tab.tab--active{
   display: block;
@@ -23,5 +24,17 @@ body {
   text-decoration: none;
 }
 .d-none{
+  display: none;
+}
+.tab-body.d-flex{
+  display: flex!important;
+}
+.name-tab.tab--active{
+  opacity: 1!important;
+}
+.body-info.d-flex{
+  display: flex!important;
+}
+.off{
   display: none!important;
 }
