@@ -21,6 +21,7 @@
   --opacity-switch-light: 1;
   --bg-panel4d4e4f: #4d4e4f;
   --tab-color: #4d4e4f;
+  --filter-active: #ff562f;
 }
 
 @supports (--css: variables) {
@@ -39,7 +40,7 @@
     --opacity-switch-light: 0;
     --bg-panel4d4e4f: #ffffff;
     --tab-color: #c2c6cb;
-    
+    --filter-active: #c2c6cb;
   }
 }
 

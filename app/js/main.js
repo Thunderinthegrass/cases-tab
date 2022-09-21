@@ -65,19 +65,42 @@ function casesTab() {
 }
 casesTab()
 
-function tabBody() {
-  function tabs(tabItem, tabNavItem) {
-    tabNavItem.forEach((elem, index) => {
-      elem.addEventListener('click', (e) => {
-        for (let i = 0; i < tabNavItem.length; i++) {
-          tabNavItem[i].classList.remove('tabs-navigation__item--active');
-          e.target.classList.add('tabs-navigation__item--active');
-          tabItem[i].classList.remove('tab--active');
+function tabfilters() {
+  // const casesTab = document.querySelectorAll('.cases__tab');
+  const casesTab = document.querySelectorAll('.cases__tab');
+
+  for (let i = 0; i < casesTab.length; i++) {//обертка кнопок фильтров
+    let tabFilter = casesTab[i].querySelectorAll('.tab-filter');
+    let tabBody = casesTab[i].querySelectorAll('.tab-body');
+
+    for (let k = 0; k < tabFilter.length; k++){//кнопки фильтров
+
+
+      tabFilter[k].addEventListener('click',() => {
+        for (let b = 0; b < tabBody.length; b++){//добавление всем d-none
+          tabBody[b].classList.add('d-none');
+          tabFilter[b].classList.remove('tab--active')
         }
-        tabItem[index].classList.add('tab--active');
+        tabBody[k].classList.remove('d-none');
+        tabFilter[k].classList.add('tab--active')
       })
-    })
+    }
   }
 
-  tabs(tabItem, tabNavItem);
+
+  // function tabs(tabItem, tabNavItem) {
+  //   tabNavItem.forEach((elem, index) => {
+  //     elem.addEventListener('click', (e) => {
+  //       for (let i = 0; i < tabNavItem.length; i++) {
+  //         tabNavItem[i].classList.remove('tabs-navigation__item--active');
+  //         e.target.classList.add('tabs-navigation__item--active');
+  //         tabItem[i].classList.remove('tab--active');
+  //       }
+  //       tabItem[index].classList.add('tab--active');
+  //     })
+  //   })
+  // }
+
+  // tabs(tabItem, tabNavItem);
 }
+tabfilters();

@@ -85,9 +85,18 @@ body {
   display: block;
 }
 
+.tab-filter.tab--active {
+  color: var(--filter-active) !important;
+  border-color: var(--filter-active) !important;
+}
+
 .cases-button.tabs-navigation__item--active {
   color: #C2C6CB;
   text-decoration: none;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .cases {
@@ -142,6 +151,9 @@ body {
   font-size: 16px;
   line-height: 19px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .cases .tab-filter:first-child {
   width: 313px;
@@ -333,6 +345,7 @@ body {
   --opacity-switch-light: 1;
   --bg-panel4d4e4f: #4d4e4f;
   --tab-color: #4d4e4f;
+  --filter-active: #ff562f;
 }
 
 @supports (--css: variables) {
@@ -351,6 +364,7 @@ body {
     --opacity-switch-light: 0;
     --bg-panel4d4e4f: #ffffff;
     --tab-color: #c2c6cb;
+    --filter-active: #c2c6cb;
   }
 }
 .active {

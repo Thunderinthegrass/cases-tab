@@ -14,7 +14,14 @@ body {
 .cases__tab.tab--active{
   display: block;
 }
+.tab-filter.tab--active{
+  color: var(--filter-active)!important;
+  border-color: var(--filter-active)!important;
+}
 .cases-button.tabs-navigation__item--active{
   color: #C2C6CB;
   text-decoration: none;
+}
+.d-none{
+  display: none!important;
 }
