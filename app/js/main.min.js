@@ -137,8 +137,10 @@ function slider() {
         count = 0;
       }
       for (let k = 0; k < nameTab.length; k++) {
-        nameTab[k].classList.add('off');
-        nameTab[count].classList.remove('off');
+        // nameTab[k].classList.add('off');
+        // nameTab[count].classList.remove('off');
+        nameTab[k].classList.remove('tab--active');
+        nameTab[count].classList.add('tab--active');
         bodyInfo[k].classList.remove('d-flex');
         bodyInfo[count].classList.add('d-flex');
         console.log(count)
